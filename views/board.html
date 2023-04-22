@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../public/board.js">
+</head>
+<body>
+<div id="board">
+제목: <input type="text">
+가게이름: <input type="text">
+별점: <input type="text">
+닉네임: <input type="text">
+내용: <input type="text">
+<button type="submit">등록</button>
+    <div id = "board-list">
+        {% for board in boards %}
+        <div id="list">
+            {{board.board_no}}
+            {{board.title}}
+            {{board.store_name}}
+            {{board.star}}
+            {{board.nick}}
+            {{board.content}}
+        </div>
+        {% endfor %}
+</div>
+</div>
+<script src="/board.js"></script>
+</body>
+</html>
